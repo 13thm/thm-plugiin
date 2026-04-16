@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    // MCP服务器配置示例
+    // "my-server": {
+    //   "command": "node",
+    //   "args": ["path/to/server.js"]
+    // }
+  }
+}

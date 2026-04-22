@@ -1,0 +1,41 @@
+{
+  "$schema": "https://claude.ai/c/config-schema.json",
+  "app": {
+    "autoSubmit": false,
+    "permissions": {
+      "sensitive": {
+        "denied": [
+          "DangerousBash",
+          "DangerousWebFetch",
+          "DangerousWebSearch"
+        ]
+      }
+    }
+  },
+  "hooks": {
+    "pre-commit": {
+      "command": "echo 'Running pre-commit checks...'"
+    },
+    "post-commit": {
+      "command": "echo 'Commit completed.'"
+    }
+  },
+  "skills": {
+    "enabled": [
+      "simplify",
+      "update-config"
+    ]
+  },
+  "mcpServers": {
+    // Configure MCP servers here
+  },
+  "agentPolicies": {
+    "default": "claude-sonnet-4-6",
+    "code": "claude-opus-4-6",
+    "architect": "claude-opus-4-6"
+  },
+  "ui": {
+    "theme": "dark",
+    "fontSize": 14
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://claude.ai/c/config-schema.json",
+  "app": {
+    "editor": {
+      "path": "code",
+      "args": ["--wait"]
+    },
+    "permissions": {
+      "sensitive": {
+        "allowed": [
+          // Override project-level restrictions for local development
+        ]
+      }
+    }
+  },
+  "hooks": {
+    "pre-commit": {
+      "command": "echo 'Local pre-commit hook...'"
+    }
+  },
+  "mcpServers": {
+    // Local MCP server configurations
+  },
+  "ui": {
+    "theme": "auto",
+    "fontSize": 13
+  },
+  "developer": {
+    "debugMode": false,
+    "logLevel": "info"
+  }
+}

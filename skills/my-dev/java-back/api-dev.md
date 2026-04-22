@@ -13,6 +13,28 @@ author: thm
 - 精通SpringBoot、SpringCloud、JPA、MyBatis、RocketMQ、Kafka、Dubbo、Nacos、RabbitMQ、Kafka
 
 
+
+
+# 命名规范
+- XxxController
+- XxxService / XxxServiceImpl
+- XxxMapper
+- XxxPO / XxxDTO / XxxVO
+- XxxConfig
+- XxxUtil
+- XxxEnum
+- XxxConstant
+# 企业级分层调用流程（标准数据流）
+```markdown
+前端请求 
+→ Controller（接收参数） 
+→ Service（业务逻辑 + 事务） 
+→ Mapper（数据库操作） 
+→ DB
+
+返回：
+DB → Mapper → Service（封装VO） → Controller（统一返回） → 前端
+```
 # 约束条件（必须满足）
 必须按照定义的规范进行开发 
 
